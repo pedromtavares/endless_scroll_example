@@ -1,0 +1,20 @@
+<div class="block">       
+  <div class="content">                       
+    <h2 class="title"><%= t("web-app-theme.new", :default => "New")%>  Post</h2>
+    <div class="inner">
+      <%= form_for :post, :url => posts_path, :html => { :class => :form } do |f| -%>
+        <%= render :partial => "form", :locals => {:f => f} %>
+      <% end -%>
+    </div>      
+    <h2 class="title"><%= t("web-app-theme.all", :default => "All")  %> Posts</h2>
+    <div class="inner">
+      <ul class='list' last="<%=@posts.to_a.last.created_at%>">
+        <%=render :partial => "post", :collection => @posts%>
+        <div id="infinite-scroll"></div>
+      </ul>
+      <div class="center"><%=image_tag "loading.gif", :class => 'loading none'%></div>
+    </div>
+  </div>
+</div>
+
+<% content_for :sidebar, render(:partial => 'sidebar') -%>

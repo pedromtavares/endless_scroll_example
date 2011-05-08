@@ -1,0 +1,16 @@
+
+  <div class="group">
+    <%= f.label :author, t("activerecord.attributes.post.author", :default => "Author"), :class => :label %>
+    <%= f.text_field :author, :class => 'text_field', :maxlength => '20' %>
+  </div>
+
+  <div class="group">
+    <%= f.label :body, t("activerecord.attributes.post.body", :default => "Body"), :class => :label %>
+    <%= f.text_area :body, :class => 'text_field', :maxlength => '200' %>
+  </div>
+  
+  <button class="button" type="submit">
+    <%= image_tag("web-app-theme/icons/tick.png", :alt => "#{t("web-app-theme.save", :default => "Save")}") %> <%= t("web-app-theme.save", :default => "Save") %>
+  </button>
+  
+  <br/><br/>

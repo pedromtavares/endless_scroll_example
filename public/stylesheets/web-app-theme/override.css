@@ -1,0 +1,22 @@
+/* Override here any style defined by web-app-theme */
+
+textarea{
+	height:50px;
+}
+
+input{
+	max-width:295px;
+}
+
+.list{
+	height:250px;
+	overflow:auto;
+}
+
+.none{
+	display:none;
+}
+
+.center{
+	text-align:center;
+}

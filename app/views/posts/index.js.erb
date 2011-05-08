@@ -1,0 +1,6 @@
+<% unless @posts.blank? %>
+	$('.endless_scroll_inner_wrap').append("<%=escape_javascript(render :partial => 'post', :collection => @posts)%>");
+	$('.list').attr('last', '<%=@posts.to_a.last.created_at%>')
+<% else %>
+	$('#infinite-scroll').detach();
+<% end %>

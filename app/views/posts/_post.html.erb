@@ -1,0 +1,10 @@
+<li> 
+  <div class="left"> 
+    <strong><%=post.author%></strong>
+    <br/>
+    <span class="description"><%=post.created_at.strftime("%b %e, %l:%M %p")%></span> 
+  </div> 
+  <div class="item"> 
+    <p><%=post.body%></p> 
+  </div> 
+</li>
