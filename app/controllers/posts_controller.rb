@@ -8,9 +8,10 @@ class PostsController < ApplicationController
 	def create
 		@post = Post.new(params[:post])
 			if @post.save
-				redirect_to posts_path, :notice => "Post successfully created!"
+				flash[:notice] = "Post successfully created!"
 			else
-				redirect_to posts_path, :error => "Problem creating your post."
+				flash[:error] = "Error! You left some stuff blank."
 			end
+			redirect_to posts_path
 	end
 end
